@@ -1,0 +1,15 @@
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\bin\Debug\net9.0\rockPaperScissorsGame.exe
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\bin\Debug\net9.0\rockPaperScissorsGame.deps.json
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\bin\Debug\net9.0\rockPaperScissorsGame.runtimeconfig.json
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\bin\Debug\net9.0\rockPaperScissorsGame.dll
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\bin\Debug\net9.0\rockPaperScissorsGame.pdb
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.AssemblyInfoInputs.cache
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.AssemblyInfo.cs
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.csproj.CoreCompileInputs.cache
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.sourcelink.json
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.dll
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\refint\rockPaperScissorsGame.dll
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.pdb
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\rockPaperScissorsGame.genruntimeconfig.cache
+C:\Users\Ben\Documents\codingProjects\rockPaperScissorsGame\obj\Debug\net9.0\ref\rockPaperScissorsGame.dll
