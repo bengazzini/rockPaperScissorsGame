@@ -6,24 +6,24 @@
         int winCountComputer = 0;
         string[] computerHand = new string[] { "Rock", "Paper", "Scissors" };
         Random random = new Random();
+        bool keepPlaying = true;
 
-
-        Console.WriteLine("GamesMaster: Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
-        Console.WriteLine("GamesMaster: Type Rock, Paper, or Scissors to begin!");
+        Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
+        Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
 
         do
         {
             int randomIndex = random.Next(computerHand.Length);
-            string computerTurn = computerHand[randomIndex];
-            string userTurn = Console.ReadLine();
-            Console.WriteLine("GamesMaster: " + computerTurn);
+            string computerTurn = computerHand[randomIndex].ToLower();
+            string userTurn = Console.ReadLine().ToLower();
+            Console.WriteLine(computerTurn);
             
-            if (userTurn == "Rock" && computerTurn == "Scissors" || userTurn == "Paper" && computerTurn == "Rock" || userTurn == "Scissors" && computerTurn == "Paper")
+            if (userTurn == "rock" && computerTurn == "scissors" || userTurn == "paper" && computerTurn == "rock" || userTurn == "scissors" && computerTurn == "paper")
             {
                 winCountUser++;
                 Console.WriteLine($"You have won this round. Win Count: {winCountUser} Lose Count {winCountComputer}.");
             }
-            else if (computerTurn == "Rock" && userTurn == "Scissors" || computerTurn == "Paper" && userTurn == "Rock" || computerTurn == "Scissors" && userTurn == "Paper")
+            else if (computerTurn == "rock" && userTurn == "scissors" || computerTurn == "paper" && userTurn == "rock" || computerTurn == "scissors" && userTurn == "paper")
             {
                 winCountComputer++;
                 Console.WriteLine($"You have lost this round. Win Count: {winCountUser} Lose Count {winCountComputer}.");
@@ -32,16 +32,18 @@
             {
                 Console.WriteLine("Draw! Try again.");
             }
+                    if (winCountUser == 3)
+            {
+                keepPlaying = false;
+                Console.WriteLine("Congratulations, you have won!");
+            }
+            if(winCountComputer == 3)
+            {
+                keepPlaying = false;
+                Console.WriteLine("Congratulations, you have lost!");
+            }
         }
-        while (winCountUser < 3 || winCountComputer < 3);
-        if (winCountUser == 3)
-        {
-            Console.WriteLine("Congrats, you are a true winner!");
-            Environment.Exit(0);
-        }
-        if(winCountComputer == 3)
-        {
-            Environment.Exit(0);
-        }
+        while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);
+    
     }
 }
