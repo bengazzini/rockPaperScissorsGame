@@ -44,10 +44,10 @@
                     winCountUser = 0;
                     winCountComputer = 0;
                 }
+                keepPlaying = false;
             }
             if(winCountComputer == 3)
             {
-                keepPlaying = false;
                 Console.WriteLine("Congratulations, you have lost!");
                 Console.WriteLine("Would you like to play again? yes/no");
                 userInput = Console.ReadLine();
@@ -56,6 +56,7 @@
                     winCountUser = 0;
                     winCountComputer = 0;
                 }
+                keepPlaying = false;
             }
         }
         while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);
