@@ -7,6 +7,8 @@
         string[] computerHand = new string[] { "Rock", "Paper", "Scissors" };
         Random random = new Random();
         bool keepPlaying = true;
+        string userInput = "";
+        
 
         Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
         Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
@@ -32,15 +34,28 @@
             {
                 Console.WriteLine("Draw! Try again.");
             }
-                    if (winCountUser == 3)
+                if (winCountUser == 3)
             {
-                keepPlaying = false;
                 Console.WriteLine("Congratulations, you have won!");
+                Console.WriteLine("Would you like to play again? yes/no");
+                userInput = Console.ReadLine();
+                if(userInput == "yes")
+                {
+                    winCountUser = 0;
+                    winCountComputer = 0;
+                }
             }
             if(winCountComputer == 3)
             {
                 keepPlaying = false;
                 Console.WriteLine("Congratulations, you have lost!");
+                Console.WriteLine("Would you like to play again? yes/no");
+                userInput = Console.ReadLine();
+                if(userInput == "yes")
+                {
+                    winCountUser = 0;
+                    winCountComputer = 0;
+                }
             }
         }
         while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);
