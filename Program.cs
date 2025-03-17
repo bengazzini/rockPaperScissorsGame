@@ -44,6 +44,10 @@
                     winCountUser = 0;
                     winCountComputer = 0;
                 }
+                if(userInput == "no")
+                {
+                    keepPlaying = false;
+                }
             }
             if(winCountComputer == 3)
             {
