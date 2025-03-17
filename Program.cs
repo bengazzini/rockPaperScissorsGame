@@ -44,7 +44,6 @@
                     winCountUser = 0;
                     winCountComputer = 0;
                 }
-                keepPlaying = false;
             }
             if(winCountComputer == 3)
             {
@@ -55,8 +54,13 @@
                 {
                     winCountUser = 0;
                     winCountComputer = 0;
+                    keepPlaying = true;
                 }
-                keepPlaying = false;
+
+                if(userInput == "no")
+                {
+                    keepPlaying = false;
+                }
             }
         }
         while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);
