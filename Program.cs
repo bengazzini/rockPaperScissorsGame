@@ -24,12 +24,12 @@ internal class Program
             if (userTurn == "rock" && computerTurn == "scissors" || userTurn == "paper" && computerTurn == "rock" || userTurn == "scissors" && computerTurn == "paper")
             {
                 winCountUser++;
-                Console.WriteLine($"You have won this round. Win Count: {winCountUser} Lose Count {winCountComputer}.");
+                Console.WriteLine($"Win Count: {winCountUser} Loss Count {winCountComputer}.");
             }
             else if (computerTurn == "rock" && userTurn == "scissors" || computerTurn == "paper" && userTurn == "rock" || computerTurn == "scissors" && userTurn == "paper")
             {
                 winCountComputer++;
-                Console.WriteLine($"You have lost this round. Win Count: {winCountUser} Lose Count {winCountComputer}.");
+                Console.WriteLine($"Win Count: {winCountUser} Lose Count {winCountComputer}.");
             }
             else if(computerTurn == userTurn)
             {
@@ -37,7 +37,9 @@ internal class Program
             }
                 if (winCountUser == 3)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Congratulations, you have won!");
+                Console.ResetColor();
                 Console.WriteLine("Would you like to play again? yes/no");
                 userInput = Console.ReadLine();
                 if(userInput == "yes")
@@ -45,10 +47,7 @@ internal class Program
                     winCountUser = 0;
                     winCountComputer = 0;
                     keepPlaying = true;
-                    Console.Clear();
-                    Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
-                    Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
-
+                    PlayAgain();
                 }
                 if(userInput == "no")
                 {
@@ -57,7 +56,9 @@ internal class Program
             }
             if(winCountComputer == 3)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Congratulations, you have lost!");
+                Console.ResetColor();
                 Console.WriteLine("Would you like to play again? yes/no");
                 userInput = Console.ReadLine();
                 if(userInput == "yes")
@@ -65,9 +66,7 @@ internal class Program
                     winCountUser = 0;
                     winCountComputer = 0;
                     keepPlaying = true;
-                    Console.Clear();
-                    Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
-                    Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
+                    PlayAgain();
                 }
 
                 if(userInput == "no")
@@ -77,5 +76,12 @@ internal class Program
             }
         }
         while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);   
+    }
+
+    static void PlayAgain()
+    {
+        Console.Clear();
+        Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
+        Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
     }
 }
