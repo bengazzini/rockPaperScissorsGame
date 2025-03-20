@@ -20,7 +20,11 @@ internal class Program
             Console.Write("You: ");
             string userTurn = Console.ReadLine().ToLower();
             Console.WriteLine($"Computer: {computerTurn}");
-            
+            if(userTurn != "rock".ToLower() && userTurn != "paper".ToLower() && userTurn != "scissors".ToLower())
+            {
+                Console.WriteLine("Input is not recognized. Please type rock, paper, or scissors.");
+            }
+
             if (userTurn == "rock" && computerTurn == "scissors" || userTurn == "paper" && computerTurn == "rock" || userTurn == "scissors" && computerTurn == "paper")
             {
                 winCountUser++;
@@ -33,7 +37,9 @@ internal class Program
             }
             else if(computerTurn == userTurn)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Draw! Try again.");
+                Console.ResetColor();
             }
                 if (winCountUser == 3)
             {
