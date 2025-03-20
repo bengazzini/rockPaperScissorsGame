@@ -1,4 +1,5 @@
-﻿internal class Program
+﻿
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -9,7 +10,6 @@
         bool keepPlaying = true;
         string userInput = "";
         
-
         Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
         Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
 
@@ -17,8 +17,9 @@
         {
             int randomIndex = random.Next(computerHand.Length);
             string computerTurn = computerHand[randomIndex].ToLower();
+            Console.Write("You: ");
             string userTurn = Console.ReadLine().ToLower();
-            Console.WriteLine(computerTurn);
+            Console.WriteLine($"Computer: {computerTurn}");
             
             if (userTurn == "rock" && computerTurn == "scissors" || userTurn == "paper" && computerTurn == "rock" || userTurn == "scissors" && computerTurn == "paper")
             {
@@ -43,6 +44,11 @@
                 {
                     winCountUser = 0;
                     winCountComputer = 0;
+                    keepPlaying = true;
+                    Console.Clear();
+                    Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
+                    Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
+
                 }
                 if(userInput == "no")
                 {
@@ -59,6 +65,9 @@
                     winCountUser = 0;
                     winCountComputer = 0;
                     keepPlaying = true;
+                    Console.Clear();
+                    Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
+                    Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
                 }
 
                 if(userInput == "no")
@@ -67,7 +76,6 @@
                 }
             }
         }
-        while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);
-    
+        while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);   
     }
 }
