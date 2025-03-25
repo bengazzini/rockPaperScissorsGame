@@ -10,8 +10,7 @@ internal class Program
         bool keepPlaying = true;
         string userInput = "";
         
-        Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
-        Console.WriteLine("Type Rock, Paper, or Scissors to begin!");
+        PlayGame();
 
         do
         {
@@ -53,7 +52,7 @@ internal class Program
                     winCountUser = 0;
                     winCountComputer = 0;
                     keepPlaying = true;
-                    PlayAgain();
+                    PlayGame();
                 }
                 if(userInput == "no")
                 {
@@ -72,7 +71,7 @@ internal class Program
                     winCountUser = 0;
                     winCountComputer = 0;
                     keepPlaying = true;
-                    PlayAgain();
+                    PlayGame();
                 }
 
                 if(userInput == "no")
@@ -84,7 +83,7 @@ internal class Program
         while(winCountUser <= 3 && keepPlaying == true || winCountComputer <= 3 && keepPlaying == true);   
     }
 
-    static void PlayAgain()
+    static void PlayGame()
     {
         Console.Clear();
         Console.WriteLine("Welcome! Let's play some ROCK, PAPER, SCISSORS!!! ");
